@@ -31,15 +31,15 @@
       "required": true
     },
     "TWITTER_ACCESS_TOKEN_KEY": {
-      "description": "Your Twitter access token key.",
+      "description": "Your Twitter access token key. Requires read and write permissions.",
       "required": true
     },
     "TWITTER_ACCESS_TOKEN_SECRET": {
-      "description": "Your Twitter access token secret.",
+      "description": "Your Twitter access token secret. Requires read and write permissions.",
       "required": true
     },
     "DISCORD_CHANNELS": {
-      "description": "The Discord channels to listen to for reactions on messages.",
+      "description": "The Discord channels to listen to for reactions on messages. Add more than one channel by separating them with a comma.",
       "required": true
     },
     "TWEET_REACTION_EMOJI": {
