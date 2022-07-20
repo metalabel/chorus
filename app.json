@@ -1,0 +1,66 @@
+{
+  "name": "Chorus",
+  "description": "A Discord bot that allows for collective tweeting through reactions.",
+  "repository": "https://github.com/metalabel/chorus",
+  "logo": "",
+  "keywords": [
+    "node",
+    "discord",
+    "twitter",
+    "bot",
+    "tweet",
+    "reaction",
+    "chorus"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "DISCORD_BOT_TOKEN": {
+      "description": "Your Discord bot token.",
+      "required": true
+    },
+    "TWITTER_CONSUMER_KEY": {
+      "description": "Your Twitter consumer key.",
+      "required": true
+    },
+    "TWITTER_CONSUMER_SECRET": {
+      "description": "Your Twitter consumer secret.",
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN_KEY": {
+      "description": "Your Twitter access token key.",
+      "required": true
+    },
+    "TWITTER_ACCESS_TOKEN_SECRET": {
+      "description": "Your Twitter access token secret.",
+      "required": true
+    },
+    "DISCORD_CHANNELS": {
+      "description": "The Discord channels to listen to for reactions on messages.",
+      "required": true
+    },
+    "TWEET_REACTION_EMOJI": {
+      "description": "Reaction emoji for sending message as a tweet.",
+      "value": "❤️",
+      "required": true
+    },
+    "TWEET_REACTION_THRESHOLD": {
+      "description": "Reaction threshold for sending a message as a tweet.",
+      "value": "5",
+      "required": true
+    },
+    "TWEET_SUCCESS": {
+      "description": "Reaction emoji for tweets that have been sent successfully.",
+      "value": "✅",
+      "required": true
+    },
+    "TWEET_ERROR": {
+      "description": "Reaction emoji for tweets that have encountered an error.",
+      "value": "❌",
+      "required": true
+    }
+  }
+}

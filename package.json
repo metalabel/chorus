@@ -1,0 +1,26 @@
+{
+  "name": "chorus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metalabel/chorus.git"
+  },
+  "author": "Lauren Dorman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/metalabel/chorus/issues"
+  },
+  "homepage": "https://github.com/metalabel/chorus#readme",
+  "dependencies": {
+    "discord.js": "13.9.0",
+    "dotenv": "16.0.1",
+    "got": "12.1.0",
+    "twitter": "1.7.1"
+  },
+  "type": "module"
+}
