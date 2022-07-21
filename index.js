@@ -31,12 +31,21 @@ Discord.on('messageReactionAdd', async (reaction) => {
   if (
     process.env.DISCORD_CHANNELS.split(',').includes(reaction.message.channelId)
   ) {
-    if (reaction.me === true) {
-      console.log('Already posted to Twitter or rejected. Stopping.');
+    const message = reaction.message;
+
+    let channel = message.guild.channels.cache.get(message.channelId);
+    if (channel) {
+      channel.messages.fetch(message.id).then((message) => {
+        const botReaction = message.reactions.cache
+          .each(async (reaction) => await reaction.users.fetch())
+          .find((reaction) => reaction.users.cache.filter((user) => user.bot));
+
+        if (botReaction.me === true) {
+          console.log('Already posted to Twitter or rejected. Stopping.');
+        }
+      });
       return;
     }
-
-    const message = reaction.message;
 
     // Do not attempt to post to Twitter if the message is longer than 280 characters
     if (message.content && message.content.length > 280) {
