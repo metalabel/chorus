@@ -26,6 +26,7 @@ Discord.on('ready', () => {
 Discord.on('messageReactionAdd', async (reaction) => {
   if (reaction.partial) await reaction.fetch();
   if (reaction.message.partial) await reaction.message.fetch();
+  if (reaction.emoji.partial) await reaction.emoji.fetch();
 
   // Check if the reaction was in one of the allowed channels
   if (
@@ -33,18 +34,20 @@ Discord.on('messageReactionAdd', async (reaction) => {
   ) {
     const message = reaction.message;
 
+    // Fetch all reactions from the message and check if the bot has already reacted to the message
     let channel = message.guild.channels.cache.get(message.channelId);
     if (channel) {
-      channel.messages.fetch(message.id).then((message) => {
-        const botReaction = message.reactions.cache
+      const botReaction = channel.messages.fetch(message.id).then((message) => {
+        message.reactions.cache
           .each(async (reaction) => await reaction.users.fetch())
           .find((reaction) => reaction.users.cache.filter((user) => user.bot));
-
-        if (botReaction.me === true) {
-          console.log('Already posted to Twitter or rejected. Stopping.');
-        }
       });
-      return;
+
+      // If the bot has already reacted to the message, stop processing
+      if (botReaction.me === true) {
+        console.log('Already posted to Twitter or rejected. Stopping.');
+        return;
+      }
     }
 
     // Do not attempt to post to Twitter if the message is longer than 280 characters
@@ -68,10 +71,7 @@ Discord.on('messageReactionAdd', async (reaction) => {
         ? reaction.emoji
         : null;
 
-    if (
-      emoji &&
-      reaction.emoji.reaction.count >= process.env.TWEET_REACTION_THRESHOLD
-    ) {
+    if (emoji && reaction.count >= process.env.TWEET_REACTION_THRESHOLD) {
       const includesMedia = message.attachments.first();
 
       // Upload media if the message includes an attachment
