@@ -61,6 +61,11 @@
       "description": "Reaction emoji for tweets that have encountered an error.",
       "value": "❌",
       "required": true
+    },
+    "RESPOND_WITH_LINK": {
+      "description": "Respond to the original message with a link to the successfully published tweet.",
+      "value": true,
+      "required": true
     }
   }
 }
