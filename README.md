@@ -1,8 +1,10 @@
 # CHORUS
 
-CHORUS is a Discord bot that puts a community in direct control of what it tweets.
+Create a way for any member in your community to tweet without sharing Twitter passwords.
 
-This Autocode app is provided as-is by [Metalabel](https://metalabel.xyz/) as part of a collaborative release with [Trust](https://trust.support/).
+CHORUS allows a Discord community to automatically tweet messages from members. Messages sent within specified channels can be upvoted by other members with emoji reactions. Once a message has received enough reactions, it gets automatically tweeted from a connected account.
+
+This software is provided as-is by [Metalabel](https://metalabel.xyz/) as part of a collaborative release with [Trust](https://trust.support/).
 
 ## Prerequisites
 
