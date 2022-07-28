@@ -10,7 +10,7 @@ This software is provided as-is by [Metalabel](https://metalabel.xyz/) as part o
 
 - [Discord App and Bot](https://discord.com/developers/applications)
 - [Twitter account](https://twitter.com/), [Twitter Developer Account](https://developer.twitter.com/), and a [Twitter Application](https://developer.twitter.com/en/portal/projects-and-apps)
-- [Twitter v1 API and User Access tokens](https://developer.twitter.com/en/docs/apps/overview)
+- [Twitter v1 API and User Access tokens](https://developer.twitter.com/en/docs/apps/overview) with Read and Write permissions
 
 **Note:** Twitter v1 API access is used to support media uploads, which is not yet available in the v2 API. In order to gain access to the v1 API, you’ll need to apply for Elevated access via Twitter's Developer Portal. You can learn more [here](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#item0).
 
