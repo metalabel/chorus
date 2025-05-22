@@ -4,7 +4,7 @@ Create a way for any member in your community to tweet without sharing Twitter p
 
 CHORUS allows a Discord community to automatically tweet messages from members. Messages sent within specified channels can be upvoted by other members with emoji reactions. Once a message has received enough reactions, it gets automatically tweeted from a connected account.
 
-This software is provided as-is by [Metalabel](https://metalabel.xyz/) as part of a collaborative release with [Trust](https://trust.support/).
+This software is provided as-is by [Metalabel](https://metalabel.com/) as part of a collaborative release with [Trust](https://trust.support/).
 
 ## Prerequisites
 
@@ -13,8 +13,6 @@ This software is provided as-is by [Metalabel](https://metalabel.xyz/) as part o
 - [Twitter v1 API and User Access tokens](https://developer.twitter.com/en/docs/apps/overview) with Read and Write permissions
 
 **Note:** Twitter v1 API access is used to support media uploads, which is not yet available in the v2 API. In order to gain access to the v1 API, you’ll need to apply for Elevated access via Twitter's Developer Portal. You can learn more [here](https://developer.twitter.com/en/docs/twitter-api/getting-started/about-twitter-api#item0).
-
-If you do not have access to the Twitter v1 APIs then you can install the [Autocode app](https://autocode.com/metalabel/apps/chorus/) as an alternative.
 
 ## Initial set-up and installation
 
@@ -42,7 +40,7 @@ In order to test and use the bot locally, you must have [Node](https://nodejs.or
 
 To test and use the bot locally, you can do the following commands:
 
-- Clone the project: `git clone git@github.com:laurendorman/color-of-berlin.git`
+- Clone the project: `git clone git@github.com:metalabel/chorus.git`
 - Change to the project directory: `cd chorus`
 - Install the project dependencies: `npm install`
 
